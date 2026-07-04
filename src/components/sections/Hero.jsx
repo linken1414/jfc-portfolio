@@ -1,16 +1,21 @@
 import Button from "../ui/Button";
+import Typewriter from "../ui/Typewriter";
 
 export default function Hero() {
   return (
     <section className="relative isolate max-w-5xl mx-auto px-6 py-24 sm:py-32 overflow-hidden">
-      {/* Animated background glow */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-glow-1" />
         <div className="absolute top-20 right-1/4 w-72 h-72 bg-accent-secondary/20 rounded-full blur-3xl animate-glow-2" />
       </div>
 
       <p className="text-accent font-mono text-sm mb-4">
-        Hi, my name is Jonathan Francis S. Corpuz 👋
+        <Typewriter
+        phrases={[
+       "Hi, my name is Jonathan Francis S. Corpuz 👋",
+      "Aspiring IT Professional",
+         ]}
+      />
       </p>
 
       <h1 className="text-4xl sm:text-6xl font-bold text-text-primary leading-tight mb-6">
