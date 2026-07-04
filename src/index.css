@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0a0a0f;
+  --color-surface: #14141c;
+  --color-surface-hover: #1c1c26;
+  --color-border: #27272f;
+  --color-text-primary: #f4f4f5;
+  --color-text-secondary: #a1a1aa;
+  --color-accent: #22d3ee;       /* cyan — "actively learning" energy */
+  --color-accent-hover: #06b6d4;
+  --color-accent-secondary: #a78bfa; /* violet — secondary highlight */
+}
+
+/* Custom Animations */
+@keyframes glow-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, 40px) scale(1.1); }
+}
+
+@keyframes glow-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-30px, 20px) scale(1.05); }
+}
+
+.animate-glow-1 {
+  animation: glow-1 8s ease-in-out infinite;
+}
+
+.animate-glow-2 {
+  animation: glow-2 10s ease-in-out infinite;
+}
