@@ -1,5 +1,5 @@
 import Button from "../ui/Button";
-import Typewriter from "../ui/Typewriter";
+import Typewriter from "../ui/TypeWriter";
 
 export default function Hero() {
   return (
