@@ -9,6 +9,7 @@ import Experience from "./components/sections/Experience";
 import Links from "./components/sections/Links";
 import Reveal from "./components/ui/Reveal";
 import Terminal from "./components/ui/Terminal";
+import Projects from "./components/sections/Projects";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
       <main className="flex-1">
         <Hero />
         <TechStack />
+        <Reveal>
+          <Projects />
+        </Reveal>
         <Reveal>
           <Experience />
         </Reveal>
