@@ -13,6 +13,6 @@ export const projects = [
     techStack: ["React", "Tailwind CSS"],
     image: "/projects/didasko1.png", // sadyang null muna — walang screenshot pa
     liveUrl: "https://didasko.vercel.app", // walang live demo muna, ok lang
-    githubUrl: "TODO",
+    githubUrl: "https://github.com/viniuy/didasko-capstone.git",
   },
 ];
