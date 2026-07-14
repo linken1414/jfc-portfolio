@@ -5,11 +5,11 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
 
   const navLinks = [
-  { label: "Tech Stack", href: "#tech-stack", id: "tech-stack" },
-  { label: "Projects", href: "#projects", id: "projects" },
-  { label: "Journey", href: "#experience", id: "experience" },
-  { label: "Contact", href: "#links", id: "links" },
-];
+    { label: "Tech Stack", href: "#tech-stack", id: "tech-stack" },
+    { label: "Projects", href: "#projects", id: "projects" },
+    { label: "Journey", href: "#experience", id: "experience" },
+    { label: "Contact", href: "#links", id: "links" },
+  ];
 
   useEffect(() => {
     const sectionIds = navLinks.map((link) => link.id);
@@ -32,6 +32,10 @@ export default function Navbar() {
 
     return () => observer.disconnect();
   }, []);
+
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
 
   return (
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -68,6 +72,7 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           className="sm:hidden text-text-primary p-1"
           aria-label="Toggle menu"
+          aria-expanded={isOpen}
         >
           {isOpen ? (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -80,6 +85,27 @@ export default function Navbar() {
           )}
         </button>
       </div>
+
+      {/* Mobile dropdown menu */}
+      {isOpen && (
+        <ul className="sm:hidden flex flex-col border-t border-border bg-background/95 backdrop-blur-md px-6 py-4 gap-1">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                onClick={handleLinkClick}
+                className={`block py-3 text-base font-medium transition-colors ${
+                  activeSection === link.id
+                    ? "text-accent"
+                    : "text-text-secondary hover:text-accent"
+                }`}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 }
