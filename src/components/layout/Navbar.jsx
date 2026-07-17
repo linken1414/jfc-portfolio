@@ -6,6 +6,7 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Tech Stack", href: "#tech-stack", id: "tech-stack" },
+    { label: "Tools", href: "#tools", id: "tools" },
     { label: "Projects", href: "#projects", id: "projects" },
     { label: "Journey", href: "#experience", id: "experience" },
     { label: "Contact", href: "#links", id: "links" },

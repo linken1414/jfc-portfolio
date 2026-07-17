@@ -24,11 +24,7 @@ export default function Hero() {
       </h1>
 
       <p className="text-text-secondary text-lg max-w-2xl mb-10 leading-relaxed">
-        Fresh IT graduate with hands-on experience in IT support, infrastructure, and
-        cybersecurity. I thrive in technical troubleshooting and system operations, while
-        actively upskilling in modern web development to build smarter, automated
-        solutions. I am a proactive learner eager to apply my technical foundation to
-        real-world challenges and grow alongside a dynamic team.
+        Fresh IT graduate with hands-on experience in IT support, infrastructure, and basic cybersecurity. Proficient in technical troubleshooting and system operations, with a strong focus on building smarter, automated solutions. Leverages AI-assisted development tools to streamline coding workflows and accelerate problem-solving, with a proactive commitment to upskilling in modern web development to drive team productivity and innovation.
       </p>
 
       <div className="flex flex-wrap gap-4">

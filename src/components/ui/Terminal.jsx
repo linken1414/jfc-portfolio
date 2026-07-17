@@ -80,7 +80,7 @@ export default function Terminal() {
               className="flex items-center gap-2"
             >
               <span className="bg-surface border border-border text-text-secondary text-xs font-mono px-3 py-1.5 rounded-full whitespace-nowrap shadow-lg">
-                try the terminal
+                Know me more in the terminal!
               </span>
               <motion.span
                 animate={{ x: [0, 4, 0] }}

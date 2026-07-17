@@ -27,10 +27,23 @@ html {
   50% { transform: translate(-30px, 20px) scale(1.05); }
 }
 
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .animate-glow-1 {
   animation: glow-1 8s ease-in-out infinite;
 }
 
 .animate-glow-2 {
   animation: glow-2 10s ease-in-out infinite;
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
 }

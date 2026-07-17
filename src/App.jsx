@@ -5,6 +5,7 @@ import CursorSpotlight from "./components/ui/CursorSpotlight";
 import LoadingScreen from "./components/ui/LoadingScreen";
 import Hero from "./components/sections/Hero";
 import TechStack from "./components/sections/TechStack";
+import Tools from "./components/sections/Tools"; // Inimport ang Tools component
 import Experience from "./components/sections/Experience";
 import Links from "./components/sections/Links";
 import Reveal from "./components/ui/Reveal";
@@ -21,6 +22,12 @@ function App() {
       <main className="flex-1">
         <Hero />
         <TechStack />
+        
+        {/* Workflow/Tools section as a bridge */}
+        <Reveal>
+          <Tools />
+        </Reveal>
+        
         <Reveal>
           <Projects />
         </Reveal>
