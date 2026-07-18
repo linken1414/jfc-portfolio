@@ -21,9 +21,9 @@ export default function TechStack() {
         <div className="flex gap-6 w-max animate-marquee">
           {marqueeItems.map((tech, index) => (
            <div
-          key={`${tech.name}-${index}`}
-          className="flex flex-col items-center justify-center gap-4 py-10 w-48 rounded-lg bg-surface border border-border shrink-0"
-        >
+            key={`${tech.name}-${index}`}
+            className="flex flex-col items-center justify-center gap-4 py-10 w-48 rounded-lg bg-surface border border-border shrink-0 transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_30px_-5px_var(--color-accent)]/20 hover:-translate-y-1"
+          >
           <tech.icon className="text-5xl text-text-primary" />
           <span className="text-text-primary font-medium text-lg whitespace-nowrap">
             {tech.name}
