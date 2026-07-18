@@ -1,10 +1,8 @@
 import { tools } from "../../data/tools";
-import Card from "../ui/Card";
 import Reveal from "../ui/Reveal";
+import Card from "../ui/Card";
 
 export default function Tools() {
-  // Group tools by category so we can render one header + row per group,
-  // instead of manually writing out each category block by hand.
   const categories = [...new Set(tools.map((t) => t.category))];
 
   return (
@@ -18,29 +16,29 @@ export default function Tools() {
         </p>
       </Reveal>
 
-      <div className="space-y-10">
-        {categories.map((category, catIndex) => (
-          <Reveal key={category} delay={catIndex * 0.1}>
-            <div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {categories.map((category, index) => (
+          <Reveal key={category} delay={index * 0.1}>
+            <Card className="p-6 h-full">
               <h3 className="text-sm font-mono text-text-secondary mb-4 uppercase tracking-wide">
                 {category}
               </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div className="flex flex-wrap gap-4">
                 {tools
                   .filter((t) => t.category === category)
                   .map((tool) => (
-                    <Card
+                    <div
                       key={tool.name}
-                      className="flex flex-col items-center gap-2 py-6"
+                      className="flex items-center gap-2"
                     >
-                      <tool.icon className="text-3xl text-text-primary" />
-                      <span className="text-text-primary font-medium text-sm text-center">
+                      <tool.icon className="text-2xl text-text-primary" />
+                      <span className="text-text-primary font-medium text-sm">
                         {tool.name}
                       </span>
-                    </Card>
+                    </div>
                   ))}
               </div>
-            </div>
+            </Card>
           </Reveal>
         ))}
       </div>

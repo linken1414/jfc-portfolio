@@ -12,14 +12,14 @@ export default function Hero() {
       <p className="text-accent font-mono text-sm mb-4">
         <Typewriter
         phrases={[
-       "Hi, my name is Jonathan Francis S. Corpuz 👋",
+       "Hi, my name is Jonathan Francis S. Corpuz",
       "Aspiring IT Professional",
          ]}
       />
       </p>
 
       <h1 className="text-4xl sm:text-6xl font-bold text-text-primary leading-tight mb-6">
-        I'm learning to build things{" "}
+        Building things{" "}
         <span className="text-accent">that matter.</span>
       </h1>
 
@@ -28,7 +28,7 @@ export default function Hero() {
       </p>
 
       <div className="flex flex-wrap gap-4">
-        <Button href="#tech-stack">See what I'm learning</Button>
+        <Button href="#tech-stack">See my Tech Stack</Button>
         <Button href="#links" variant="secondary">
           Get in touch
         </Button>

@@ -15,7 +15,10 @@ export default function Links() {
         <Button href="https://www.linkedin.com/in/jonathan-francis-corpuz-318653386/">
           Connect on LinkedIn
         </Button>
-        <Button href="/cv.pdf" variant="secondary" download>
+        <Button href="https://github.com/linken1414" variant="secondary">
+          View my GitHub
+        </Button>
+        <Button href="/Jonathan-Francis-Corpuz-CV.pdf" variant="secondary" download>
           Download CV
         </Button>
       </div>
