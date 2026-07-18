@@ -18,7 +18,7 @@ export default function Links() {
         <Button href="https://github.com/linken1414" variant="secondary">
           View my GitHub
         </Button>
-        <Button href="/Jonathan-Francis-Corpuz-CV.pdf" variant="secondary" download>
+        <Button href="/Jonathan-Francis-S-Corpuz.pdf" variant="secondary" download>
           Download CV
         </Button>
       </div>
