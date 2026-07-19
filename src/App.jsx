@@ -5,16 +5,18 @@ import CursorSpotlight from "./components/ui/CursorSpotlight";
 import LoadingScreen from "./components/ui/LoadingScreen";
 import Hero from "./components/sections/Hero";
 import TechStack from "./components/sections/TechStack";
-import Tools from "./components/sections/Tools"; // Inimport ang Tools component
+import Tools from "./components/sections/Tools";
 import Experience from "./components/sections/Experience";
 import Links from "./components/sections/Links";
 import Reveal from "./components/ui/Reveal";
 import Terminal from "./components/ui/Terminal";
 import Projects from "./components/sections/Projects";
+import ParticleBackground from "./components/ui/ParticleBackground";
 
 function App() {
   return (
-    <div className="bg-background min-h-screen flex flex-col">
+    <div className="relative isolate bg-background min-h-screen flex flex-col">
+      <ParticleBackground />
       <LoadingScreen />
       <CursorSpotlight />
       <ScrollProgress />
