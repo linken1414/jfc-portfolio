@@ -5,12 +5,12 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
 
   const navLinks = [
-    { label: "Tech Stack", href: "#tech-stack", id: "tech-stack" },
-    { label: "Tools", href: "#tools", id: "tools" },
-    { label: "Projects", href: "#projects", id: "projects" },
-    { label: "Journey", href: "#experience", id: "experience" },
-    { label: "Contact", href: "#links", id: "links" },
-  ];
+  { label: "Tech Stack", href: "#tech-stack", id: "tech-stack" },
+  { label: "Projects", href: "#projects", id: "projects" },
+  { label: "Tools", href: "#tools", id: "tools" },
+  { label: "Journey", href: "#experience", id: "experience" },
+  { label: "Contact", href: "#links", id: "links" },
+];
 
   useEffect(() => {
     const sectionIds = navLinks.map((link) => link.id);

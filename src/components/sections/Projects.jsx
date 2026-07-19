@@ -9,12 +9,12 @@ export default function Projects() {
         Projects
       </h2>
       <p className="text-text-secondary mb-10">
-        Things I've built while learning to code.
+        A selection of things I've built.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {projects.map((project, index) => (
-          <Reveal key={project.name} delay={index * 0.1}>
+          <Reveal key={project.name} variant="scale" delay={index * 0.15}>
             <div className="h-full">
               <ProjectCard project={project} />
             </div>

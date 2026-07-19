@@ -25,11 +25,11 @@ function App() {
         
         {/* Workflow/Tools section as a bridge */}
         <Reveal>
-          <Tools />
+          <Projects />
         </Reveal>
         
         <Reveal>
-          <Projects />
+          <Tools />
         </Reveal>
         <Reveal>
           <Experience />

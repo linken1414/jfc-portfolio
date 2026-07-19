@@ -20,7 +20,9 @@ export default function Hero() {
 
       <h1 className="text-4xl sm:text-6xl font-bold text-text-primary leading-tight mb-6">
         Building things{" "}
-        <span className="text-accent">that matter.</span>
+        <span className="bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
+        that matter.
+      </span>
       </h1>
 
       <p className="text-text-secondary text-lg max-w-2xl mb-10 leading-relaxed">
