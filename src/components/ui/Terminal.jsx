@@ -56,15 +56,32 @@ export default function Terminal() {
     }
   }, [lines]);
 
-  // Show the attention hint a few seconds after load, hide it once opened
+  // Show the attention hint a few seconds after load, hide it automatically after a while too
   useEffect(() => {
     const showTimer = setTimeout(() => setShowHint(true), 3000);
-    return () => clearTimeout(showTimer);
+    const hideTimer = setTimeout(() => setShowHint(false), 8000);
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+    };
   }, []);
 
   useEffect(() => {
     if (isOpen) setShowHint(false);
   }, [isOpen]);
+
+  // Hide the hint if the user scrolls near the bottom of the page,
+  // so it doesn't overlap the footer
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolledToBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 150;
+      if (scrolledToBottom) setShowHint(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
